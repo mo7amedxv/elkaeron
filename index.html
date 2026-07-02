@@ -1,0 +1,944 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="منصة متكاملة لبناء تجميعات الحاسوب، فحص التوافق، تحليل الأداء الحقيقي، وتوقع معدل الإطارات — كل ذلك في مكانٍ واحد."
+      data-i18n-content="meta.description"
+    />
+
+    <meta
+      property="og:title"
+      content="elKaeron | منصتك لبناء الحاسوب وتحليل الأداء"
+      data-i18n-content="og.title"
+    />
+
+    <meta
+      property="og:description"
+      content="بنِ تجميعتك، افحص التوافق، وتوقّع أداءك — بدقة وبدون تحيّز."
+      data-i18n-content="og.description"
+    />
+
+    <meta
+      property="og:image"
+      content="https://mo7amedxv.github.io/elkaeron/images/og-image.jpg"
+    />
+
+    <meta property="og:url" content="https://mo7amedxv.github.io/elkaeron/" />
+
+    <meta property="og:type" content="website" />
+
+    <meta name="theme-color" content="#0f172a" />
+
+    <link rel="canonical" href="https://mo7amedxv.github.io/elkaeron/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="icons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="icons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="icons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="icons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="icons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="icons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="icons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="icons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/apple-icon-180x180.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="icons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="icons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon-16x16.png"
+    />
+
+    <link rel="manifest" href="icons/manifest.json" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=language"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title data-i18n="site.title">elKaeron</title>
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <a href="#" class="logo">
+          <img
+            class="logo-img"
+            src="imgs/logo.svg"
+            alt="logo"
+            width="35"
+            height="35"
+          />
+        </a>
+
+        <ul class="header-links">
+          <li>
+            <a class="header-link" href="#" data-i18n="nav.builder"
+              >مجمّع الجهاز</a
+            >
+          </li>
+          <li>
+            <a class="header-link" href="#" data-i18n="nav.bottleneck"
+              >فحص الاختناق</a
+            >
+          </li>
+          <li>
+            <a class="header-link" href="#" data-i18n="nav.upgradePlan"
+              >خطة الترقية</a
+            >
+          </li>
+          <li>
+            <a class="header-link" href="#" data-i18n="nav.performanceForecast"
+              >توقع الأداء</a
+            >
+          </li>
+          <li>
+            <a class="header-link" href="#" data-i18n="nav.futureReady"
+              >جهوزية المستقبل</a
+            >
+          </li>
+          <li>
+            <a class="header-link" href="#" data-i18n="nav.compare"
+              >مقارنة التجميعات</a
+            >
+          </li>
+          <li>
+            <div class="lang-select-wrapper">
+              <select
+                class="lang-selector"
+                name="language"
+                aria-label="اختر اللغة"
+                data-i18n-aria-label="lang.select"
+              >
+                <option value="ar" data-i18n="lang.ar">عربي</option>
+                <option value="en" data-i18n="lang.en">EN</option>
+              </select>
+            </div>
+          </li>
+        </ul>
+
+        <div class="header-actions">
+          <li>
+            <button
+              id="themeToggle"
+              class="theme-btn"
+              aria-label="تبديل المظهر"
+              data-i18n-aria-label="theme.toggle"
+            >
+              <svg
+                class="icon-dark"
+                xmlns="http://www.w3.org/2000/svg"
+                height="20px"
+                viewBox="0 -960 960 960"
+                width="20px"
+                fill="currentColor"
+              >
+                <path
+                  d="M380-160q133 0 226.5-93.5T700-480q0-133-93.5-226.5T380-800h-21q-10 0-19 2 57 66 88.5 147.5T460-480q0 89-31.5 170.5T340-162q9 2 19 2h21Zm0 80q-53 0-103.5-13.5T180-134q93-54 146.5-146T380-480q0-108-53.5-200T180-826q46-27 96.5-40.5T380-880q83 0 156 31.5T663-763q54 54 85.5 127T780-480q0 83-31.5 156T663-197q-54 54-127 85.5T380-80Zm80-400Z"
+                />
+              </svg>
+              <svg
+                class="icon-light"
+                xmlns="http://www.w3.org/2000/svg"
+                height="20px"
+                viewBox="0 -960 960 960"
+                width="20px"
+                fill="currentColor"
+              >
+                <path
+                  d="M565-395q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm-226.5 56.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"
+                />
+              </svg>
+            </button>
+          </li>
+          <button type="button" class="header-btn" data-i18n="auth.login">
+            دخول / تسجيل
+          </button>
+        </div>
+        <div class="mobile-header-actions">
+          <div class="lang-select-wrapper">
+            <select
+              class="lang-selector"
+              name="language"
+              aria-label="اختر اللغة"
+              data-i18n-aria-label="lang.select"
+            >
+              <option value="ar" data-i18n="lang.ar">عربي</option>
+              <option value="en" data-i18n="lang.en">EN</option>
+            </select>
+          </div>
+          <button
+            id="themeToggle"
+            class="theme-btn"
+            aria-label="تبديل المظهر"
+            data-i18n-aria-label="theme.toggle"
+          >
+            <svg
+              class="icon-dark"
+              xmlns="http://www.w3.org/2000/svg"
+              height="20px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="currentColor"
+            >
+              <path
+                d="M380-160q133 0 226.5-93.5T700-480q0-133-93.5-226.5T380-800h-21q-10 0-19 2 57 66 88.5 147.5T460-480q0 89-31.5 170.5T340-162q9 2 19 2h21Zm0 80q-53 0-103.5-13.5T180-134q93-54 146.5-146T380-480q0-108-53.5-200T180-826q46-27 96.5-40.5T380-880q83 0 156 31.5T663-763q54 54 85.5 127T780-480q0 83-31.5 156T663-197q-54 54-127 85.5T380-80Zm80-400Z"
+              />
+            </svg>
+            <svg
+              class="icon-light"
+              xmlns="http://www.w3.org/2000/svg"
+              height="20px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="currentColor"
+            >
+              <path
+                d="M565-395q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm-226.5 56.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"
+              />
+            </svg>
+          </button>
+          <button
+            class="hamburger-btn"
+            id="hamburgerBtn"
+            aria-label="القائمة"
+            aria-expanded="false"
+            data-i18n-aria-label="nav.menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-overlay" id="menuOverlay"></div>
+      <nav class="mobile-menu-drawer">
+        <ul class="mobile-utility-links">
+          <li>
+            <button
+              id="themeToggle"
+              class="theme-btn"
+              aria-label="تبديل المظهر"
+              data-i18n-aria-label="theme.toggle"
+            >
+              <svg
+                class="icon-dark"
+                xmlns="http://www.w3.org/2000/svg"
+                height="20px"
+                viewBox="0 -960 960 960"
+                width="20px"
+                fill="currentColor"
+              >
+                <path
+                  d="M380-160q133 0 226.5-93.5T700-480q0-133-93.5-226.5T380-800h-21q-10 0-19 2 57 66 88.5 147.5T460-480q0 89-31.5 170.5T340-162q9 2 19 2h21Zm0 80q-53 0-103.5-13.5T180-134q93-54 146.5-146T380-480q0-108-53.5-200T180-826q46-27 96.5-40.5T380-880q83 0 156 31.5T663-763q54 54 85.5 127T780-480q0 83-31.5 156T663-197q-54 54-127 85.5T380-80Zm80-400Z"
+                />
+              </svg>
+              <svg
+                class="icon-light"
+                xmlns="http://www.w3.org/2000/svg"
+                height="20px"
+                viewBox="0 -960 960 960"
+                width="20px"
+                fill="currentColor"
+              >
+                <path
+                  d="M565-395q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm-226.5 56.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <div class="lang-select-wrapper">
+              <select
+                class="lang-selector"
+                name="language"
+                aria-label="اختر اللغة"
+                data-i18n-aria-label="lang.select"
+              >
+                <option value="ar" data-i18n="lang.ar">عربي</option>
+                <option value="en" data-i18n="lang.en">EN</option>
+              </select>
+            </div>
+          </li>
+        </ul>
+
+        <hr class="mobile-divider" />
+
+        <ul class="mobile-nav-links">
+          <li><a href="#" data-i18n="nav.builder">مجمّع الجهاز</a></li>
+          <li><a href="#" data-i18n="nav.bottleneck">فحص الاختناق</a></li>
+          <li><a href="#" data-i18n="nav.upgradePlan">خطة الترقية</a></li>
+          <li>
+            <a href="#" data-i18n="nav.performanceForecast">توقع الأداء</a>
+          </li>
+          <li><a href="#" data-i18n="nav.futureReady">جهوزية المستقبل</a></li>
+          <li><a href="#" data-i18n="nav.compare">مقارنة التجميعات</a></li>
+        </ul>
+
+        <button
+          type="button"
+          class="header-btn mobile-cta"
+          data-i18n="auth.login"
+        >
+          دخول / تسجيل
+        </button>
+      </nav>
+    </div>
+
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 class="hero-heading" data-i18n="hero.title">
+            كل ما تحتاجه لجهازك في مكانٍ واحد
+          </h1>
+
+          <p class="hero-desc" data-i18n="hero.desc">
+            بنِ تجميعتك، افحص التوافق، وتوقّع الأداء — منصة واحدة متكاملة
+            للمبتدئ والمحترف.
+          </p>
+
+          <div class="hero-btns">
+            <button type="button" class="hero-btn btn-primary">
+              <span data-i18n="hero.ctaPrimary">ابدأ تجميعتك</span>
+              <span class="arrow">
+                <i
+                  data-i18n="hero.arrow"
+                  class="arrow fa-solid fa-arrow-left"
+                ></i>
+              </span>
+            </button>
+            <button
+              type="button"
+              class="hero-btn btn-secondary"
+              data-i18n="hero.ctaSecondary"
+            >
+              جرّب المساعد الذكي
+            </button>
+          </div>
+        </div>
+
+        <div class="benchmark-card">
+          <div class="card-header">
+            <span class="live-indicator" data-i18n="bench.live">
+              <span class="live-dot"></span>تحليل حي
+            </span>
+            <span class="benchmark-card-title" data-i18n="bench.title"
+              >Live Benchmark</span
+            >
+          </div>
+
+          <div class="bx-stats-grid">
+            <div class="bx-stat-box">
+              <div class="bx-stat-meta">
+                <span class="bx-stat-label" data-i18n="bench.gpuLabel"
+                  >GPU</span
+                >
+                <span class="bx-stat-name" id="gpuName">RTX 4080 Super</span>
+              </div>
+              <div class="bx-stat-value" id="gpuValue">34,811</div>
+            </div>
+            <div class="bx-stat-box">
+              <div class="bx-stat-meta">
+                <span class="bx-stat-label" data-i18n="bench.cpuLabel"
+                  >CPU</span
+                >
+                <span class="bx-stat-name" id="cpuName"
+                  >Intel Core i9-14900K</span
+                >
+              </div>
+              <div class="bx-stat-value" id="cpuValue">41,230</div>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-labels">
+              <span class="metric-desc" data-i18n="bench.bottleneck"
+                >اختناق (Bottleneck)</span
+              >
+              <span
+                class="metric-status status-good"
+                id="bottleneckStatus"
+                data-i18n="bench.bottleneckStatus"
+              >
+                ممتاز ✓ 2.4%
+              </span>
+            </div>
+            <div class="progress-track">
+              <div
+                class="progress-fill fill-good"
+                id="bottleneckBar"
+                style="width: 2.4%"
+              ></div>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-labels">
+              <span class="metric-desc" data-i18n="bench.fpsLabel">
+                FPS — Cyberpunk 2077 · 1080p Ultra
+              </span>
+              <span
+                class="metric-status status-fps"
+                id="fpsStatus"
+                data-i18n="bench.fpsStatus"
+              >
+                FPS 148
+              </span>
+            </div>
+            <div class="progress-track">
+              <div
+                class="progress-fill fill-fps"
+                id="fpsBar"
+                style="width: 60%"
+              ></div>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-labels">
+              <span class="metric-desc" data-i18n="bench.futureLabel"
+                >Future Proof Score</span
+              >
+              <span
+                class="metric-status status-future"
+                id="futureStatus"
+                data-i18n="bench.futureStatus"
+              >
+                100 / 87
+              </span>
+            </div>
+            <div class="progress-track">
+              <div
+                class="progress-fill fill-future"
+                id="futureBar"
+                style="width: 87%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat">
+            <h3 class="count stat-heading stat-number" data-count="154">154</h3>
+            <p class="stat-desc" data-i18n="stats.plannedFeatures">
+              ميزة مخططة
+            </p>
+          </div>
+
+          <div class="stat">
+            <h3 class="count stat-heading stat-number" data-count="50000">
+              50000
+            </h3>
+            <p class="stat-desc" data-i18n="stats.databaseParts">
+              قطعة في الداتابيز
+            </p>
+          </div>
+
+          <div class="stat">
+            <h3 class="stat-heading" data-i18n="stats.goal.num">#1</h3>
+            <p class="stat-desc" data-i18n="stats.goal">هدفنا عالمياً</p>
+          </div>
+
+          <div class="stat">
+            <h3 class="count stat-heading stat-number" data-count="180">180</h3>
+            <p class="stat-desc" data-i18n="stats.supportedGames">
+              لعبة مدعومة
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-us">
+      <div class="container">
+        <div class="section-heading">
+          <span></span>
+          <h2 data-i18n="whyus.title">أين تُخفق المنصات الأخرى؟</h2>
+          <span></span>
+        </div>
+        <div id="why-us-container" class="why-us-grid"></div>
+      </div>
+    </section>
+    <section class="features">
+      <div class="container">
+        <div class="section-heading">
+          <span></span>
+          <h2 data-i18n="features.title">استكشف المنصة</h2>
+          <span></span>
+        </div>
+        <div id="features-container" class="features-grid"></div>
+      </div>
+    </section>
+    <section class="ai-proof">
+      <div class="container">
+        <div class="section-heading">
+          <span></span>
+          <h2 data-i18n="ai-proof.title">جهازك المثالي يبدأ من هنا</h2>
+          <span></span>
+        </div>
+        <div class="ai-box">
+          <div class="chat-demo">
+            <div class="c-msg msg1">
+              <div class="c-who" data-i18n="ai-proof.you">أنت</div>
+              <div class="bubble bu" data-i18n="ai-proof.msg1">
+                عندي ميزانية 20,000 جنيه — أنسب تجميعة ألعاب إيه؟
+              </div>
+            </div>
+            <div class="c-msg msg2">
+              <div class="c-who" data-i18n="ai-proof.ai">elKaeron AI</div>
+              <div class="bubble ba" data-i18n="ai-proof.reply1">
+                بناءً على ميزانيتك وأسعار السوق المصري الحالية: Ryzen 5 7600 +
+                RX 7700 XT + 16GB DDR5. هتحصل على 120+ FPS في معظم الألعاب عند
+                1080p مع Future Proof Score 82/100. الاختناق 1.8% فقط. تحتاج
+                تفاصيل؟
+              </div>
+            </div>
+            <div class="c-msg msg1">
+              <div class="c-who" data-i18n="ai-proof.you">أنت</div>
+              <div class="bubble bu" data-i18n="ai-proof.msg2">
+                هل RTX 4070 بدلها هتكون أحسن؟
+              </div>
+            </div>
+            <div class="c-msg msg2">
+              <div class="c-who" data-i18n="ai-proof.ai">elKaeron AI</div>
+              <div class="bubble ba" data-i18n="ai-proof.reply2">
+                RTX 4070 هتدي +12% في Ray Tracing لكنها أغلى بـ4,500 جنيه
+                وهتخرجك من الميزانية. لو الألعاب الحالية هدفك، RX 7700 XT أذكى.
+                لو عندك مرونة في الميزانية، نقدر نبص على خيار تاني.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="workflow">
+      <div class="container">
+        <div class="section-heading">
+          <span></span>
+          <h2 data-i18n="workflow.title">كيف تعمل المنصة؟</h2>
+          <span></span>
+        </div>
+        <div id="workflow-container" class="workflow-grid"></div>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span></span>
+          <h2 data-i18n="faq.title">أسئلة شائعة</h2>
+          <span></span>
+        </div>
+
+        <ul class="faq-grid">
+          <li>
+            <details class="faq-card first-faq-card" open data-open="false">
+              <summary class="faq-q">
+                <span data-i18n="faq.fps.q"
+                  >هل الموقع يتوقع أداء جهازي داخل ألعاب معينة؟</span
+                >
+                <span class="icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-ans">
+                <div class="faq-ans-inner">
+                  <p class="content" data-i18n="faq.fps.a">
+                    نعم، يقدم elKaeron تقديرًا تقريبيًا لعدد الإطارات (FPS)
+                    المتوقعة في أشهر الألعاب (مثل Cyberpunk, Valorant, GTA V)
+                    بناءً على الكرت والمعالج المختارين ودقة الشاشة (1080p, 2K,
+                    4K).
+                  </p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details class="faq-card" open data-open="false">
+              <summary class="faq-q">
+                <span data-i18n="faq.cpuGpu.q"
+                  >أيهما أفضل لاستخدامي: ميزان القوى لصالح المعالج (CPU) أم كرت
+                  الشاشة (GPU)؟</span
+                >
+                <span class="icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-ans">
+                <div class="faq-ans-inner">
+                  <p class="content" data-i18n="faq.cpuGpu.a">
+                    يعتمد ذلك على استخدامك؛ إذا كان هدفك الأساسي هو الألعاب،
+                    فالأولوية لكرت الشاشة. أما إذا كان عملك يتركز على المونتاج،
+                    البرمجة، والـ Rendering، فإن قوة المعالج هي الأهم.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details class="faq-card" open data-open="false">
+              <summary class="faq-q">
+                <span data-i18n="faq.compat.q"
+                  >كيف أضمن توافق القطع (Compatibility) عند بناء تجميعة
+                  جديدة؟</span
+                >
+                <span class="icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-ans">
+                <div class="faq-ans-inner">
+                  <p class="content" data-i18n="faq.compat.a">
+                    يقوم نظام elKaeron بفحص تلقائي للمقابس (Sockets)، أنواع
+                    الرامات (DDR4/DDR5)، والمنافذ للتأكد من أن جميع القطع التي
+                    تختارها متوافقة تماماً مع اللوحة الأم ومزود الطاقة بدون أي
+                    تعارض.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details class="faq-card" open data-open="false">
+              <summary class="faq-q">
+                <span data-i18n="faq.prices.q"
+                  >هل أسعار القطع المعروضة في الموقع محدثة؟</span
+                >
+                <span class="icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-ans">
+                <div class="faq-ans-inner">
+                  <p class="content" data-i18n="faq.prices.a">
+                    نعم، نحاول تحديث أسعار السوق بشكل دوري بناءً على متوسط
+                    الأسعار في المتاجر المحلية والعالمية، ولكن قد تحدث تغييرات
+                    طفيفة حسب العرض والطلب.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details class="faq-card" open data-open="false">
+              <summary class="faq-q">
+                <span data-i18n="faq.laptop.q"
+                  >هل يدعم الموقع مقارنة كروت الشاشة والمعالجات الخاصة باللاب
+                  توب؟</span
+                >
+                <span class="icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-ans">
+                <div class="faq-ans-inner">
+                  <p class="content" data-i18n="faq.laptop.a">
+                    حالياً المنصة تركز بشكل كامل على قطع أجهزة الكمبيوتر
+                    المكتبية (Desktop) لضمان دقة البيانات، وجاري العمل على إضافة
+                    نسخ اللاب توب في التحديثات القادمة.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details class="faq-card" open data-open="false">
+              <summary class="faq-q">
+                <span data-i18n="faq.ai.q"
+                  >كيف تساهم أدوات الذكاء الاصطناعي في موقع elKaeron؟</span
+                >
+                <span class="icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-ans">
+                <div class="faq-ans-inner">
+                  <p class="content" data-i18n="faq.ai.a">
+                    يساعدك المساعد الذكي في اقتراح أفضل تجميعة ممكنة بناءً على
+                    ميزانيتك المحددة واستخدامك (ألعاب، مونتاج، برمجة) مع تحقيق
+                    أفضل قيمة مقابل سعر.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details class="faq-card" open data-open="false">
+              <summary class="faq-q">
+                <span data-i18n="faq.bottleneckCalc.q"
+                  >كيف يقوم الموقع بحساب نسبة الاختناق (Bottleneck)؟</span
+                >
+                <span class="icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-ans">
+                <div class="faq-ans-inner">
+                  <p class="content" data-i18n="faq.bottleneckCalc.a">
+                    نعتمد على خوارزميات متطورة تقارن قوة المعالجة (CPU) وقوة
+                    الرسوميات (GPU) بناءً على اختبارات الأداء الواقعية
+                    (Benchmarks) في الألعاب وبرامج الرندر، لتحديد ما إذا كانت
+                    إحدى القطع تحد من أداء الأخرى.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </li>
+
+          <li>
+            <details class="faq-card" open data-open="false">
+              <summary class="faq-q">
+                <span data-i18n="faq.bottleneckMeaning.q"
+                  >هل نسبة الاختناق الظاهرة تعني أن جهازي لن يعمل؟</span
+                >
+                <span class="icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-ans">
+                <div class="faq-ans-inner">
+                  <p class="content" data-i18n="faq.bottleneckMeaning.a">
+                    لا بالطبع. الاختناق يعني فقط أنك لن تحصل على 100% من أداء
+                    القطعة الأقوى، لكن الجهاز سيعمل بشكل طبيعي تماماً.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <a href="#" class="logo">
+                <img src="imgs/logo.svg" class="logo-img" alt="logo" />
+                <p class="logo-name">elKaeron</p>
+              </a>
+              <p class="footer-desc" data-i18n="footer.desc">
+                منصة متكاملة لبناء وفحص وتطوير أجهزة الحاسوب — بمعايير دقيقة
+                وبيانات حقيقية.
+              </p>
+              <ul class="footer-social">
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.tiktok.com/@kaeron737?_r=1"
+                    aria-label="تيكتوك"
+                    ><i class="fa-brands fa-tiktok"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="
+                  https://www.instagram.com/kaeron_737?igsh=NTdubjMzaG82Zm5j"
+                    aria-label="إنستجرام"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/@elkaeron"
+                    aria-label="يوتيوب"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://discord.gg/J9uQvRkrba"
+                    aria-label="ديسكورد"
+                    ><i class="fa-brands fa-discord"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-links-group">
+              <h4 class="footer-heading" data-i18n="footer.tools">الأدوات</h4>
+              <ul class="footer-links">
+                <li><a href="#" data-i18n="nav.builder">مجمّع الجهاز</a></li>
+                <li><a href="#" data-i18n="nav.bottleneck">فحص الاختناق</a></li>
+                <li><a href="#" data-i18n="nav.upgradePlan">خطة الترقية</a></li>
+                <li>
+                  <a href="#" data-i18n="nav.performanceForecast"
+                    >توقع الأداء</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-i18n="nav.futureReady">جهوزية المستقبل</a>
+                </li>
+                <li>
+                  <a href="#" data-i18n="nav.compare">مقارنة التجميعات</a>
+                </li>
+                <li>
+                  <div class="lang-select-wrapper">
+                    <select
+                      class="lang-selector"
+                      name="language"
+                      aria-label="اختر اللغة"
+                      data-i18n-aria-label="lang.select"
+                    >
+                      <option value="ar" data-i18n="lang.ar">عربي</option>
+                      <option value="en" data-i18n="lang.en">EN</option>
+                    </select>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-links-group">
+              <h4 class="footer-heading" data-i18n="footer.company">الشركة</h4>
+              <ul class="footer-links">
+                <li>
+                  <a href="support/" data-i18n="footer.support">الدعم الفني</a>
+                </li>
+                <li>
+                  <a href="signup/" data-i18n="auth.login">دخول / تسجيل</a>
+                </li>
+                <li>
+                  <a href="#" data-i18n="footer.privacy">سياسة الخصوصية</a>
+                </li>
+                <li>
+                  <a href="#" data-i18n="footer.terms">الشروط والأحكام</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-bottom">
+          <p class="footer-copy" data-i18n="footer.copy">
+            © <span id="currentYear"></span> elKaeron جميع الحقوق محفوظة.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div class="container">
+      <button type="button" class="fab" id="fab">
+        <img src="icons/ai-fab-icon.svg" alt="ai-icon" />
+      </button>
+      <div class="ai-chat" id="chat">
+        <div class="chat-header">
+          Elkaeron AI Assistant
+          <button type="button" class="ai-close-btn" id="ai-close-btn">
+            ✖
+          </button>
+        </div>
+        <div class="chat-body" id="chat-body">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 30 30"
+            width="25px"
+            height="25px"
+            fill="#f2f2f2"
+            baseProfile="basic"
+          >
+            <path
+              d="M14.217,19.707l-1.112,2.547c-0.427,0.979-1.782,0.979-2.21,0l-1.112-2.547c-0.99-2.267-2.771-4.071-4.993-5.057	L1.73,13.292c-0.973-0.432-0.973-1.848,0-2.28l2.965-1.316C6.974,8.684,8.787,6.813,9.76,4.47l1.126-2.714	c0.418-1.007,1.81-1.007,2.228,0L14.24,4.47c0.973,2.344,2.786,4.215,5.065,5.226l2.965,1.316c0.973,0.432,0.973,1.848,0,2.28	l-3.061,1.359C16.988,15.637,15.206,17.441,14.217,19.707z"
+            />
+            <path
+              d="M24.481,27.796l-0.339,0.777c-0.248,0.569-1.036,0.569-1.284,0l-0.339-0.777c-0.604-1.385-1.693-2.488-3.051-3.092	l-1.044-0.464c-0.565-0.251-0.565-1.072,0-1.323l0.986-0.438c1.393-0.619,2.501-1.763,3.095-3.195l0.348-0.84	c0.243-0.585,1.052-0.585,1.294,0l0.348,0.84c0.594,1.432,1.702,2.576,3.095,3.195l0.986,0.438c0.565,0.251,0.565,1.072,0,1.323	l-1.044,0.464C26.174,25.308,25.085,26.411,24.481,27.796z"
+            />
+          </svg>
+          <h3 class="chat-title" data-i18n="chat.title">
+            Elkaeron AI Assistant
+          </h3>
+          <p class="chat-desc" data-i18n="chat.description">
+            Ask me anything about the portfolio, projects, skills, or
+            experience.
+          </p>
+        </div>
+        <div class="messages"></div>
+        <div class="send">
+          <input
+            class="message-input"
+            type="text"
+            placeholder="Ask me anything..."
+          />
+          <button type="button" class="send-btn">
+            <img src="icons/send-btn.svg" alt="send" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
