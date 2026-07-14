@@ -1344,9 +1344,7 @@ html[dir="ltr"] .fab::after {
   font-size: var(--font-sm);
   color: var(--text2);
 }
-img,
-button,
-a {
+img, button, a, select, details {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
