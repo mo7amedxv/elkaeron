@@ -1344,10 +1344,15 @@ html[dir="ltr"] .fab::after {
   font-size: var(--font-sm);
   color: var(--text2);
 }
-img, button, a, select, details {
+img, button, a, select, details, summary {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-user-drag: none;
+  outline: none;
+}
+
+select:focus, summary:focus {
+  outline: none;
 }
