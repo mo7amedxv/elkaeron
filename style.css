@@ -589,6 +589,7 @@ html[dir="rtl"] .mobile-menu-drawer {
 }
 .mobile-nav-links a {
   display: block;
+  width: 100%;
   padding: var(--space-md) var(--space-sm);
   font-size: var(--font-base);
   font-weight: var(--weight-med);
@@ -1090,4 +1091,8 @@ summary {
 select:focus,
 summary:focus {
   outline: none;
+}
+::selection{
+  background-color: var(--text);
+  color: var(--card-bg);
 }
