@@ -166,16 +166,8 @@ function updateBenchmark(data) {
   if (data.bottleneckPercent != null) {
     const p = clamp(data.bottleneckPercent, 0, 100);
     document.getElementById("bottleneckBar").style.width = p + "%";
-    const lang = document.documentElement.lang === "en" ? "en" : "ar";
-    const labels = {
-      ar: { excellent: "ممتاز", good: "جيد", high: "مرتفع" },
-      en: { excellent: "Excellent", good: "Good", high: "High" },
-    }[lang];
-    const label =
-      data.bottleneckLabel ||
-      (p < 5 ? labels.excellent : p < 15 ? labels.good : labels.high);
     document.getElementById("bottleneckStatus").textContent =
-      `${label} ✓ ${p.toFixed(1)}%`;
+      `${p.toFixed(1)}%`;
   }
 
   if (data.fps != null) {
@@ -192,6 +184,7 @@ function updateBenchmark(data) {
       clamp((data.futureScore / data.futureTotal) * 100, 0, 100) + "%";
   }
 }
+
 let liveState = {
   gpu: 34811,
   cpu: 41230,
@@ -243,10 +236,10 @@ const translations = {
   ar: {
     "site.title": "elkaeron",
     "meta.description":
-      "منصة متكاملة لتجميع الكمبيوتر، وفحص توافقه، وتحليل أدائه الفعلي، وتوقّع معدل الإطارات — كل ذلك في مكانٍ واحد.",
+      "منصة متكاملة لتجميع الكمبيوتر، وفحص توافقه، وتحليل أدائه الفعلي، وتوقّع معدل الإطارات، كل ذلك في مكانٍ واحد.",
     "og.title": "elKaeron | منصتك لتجميع الكمبيوتر وتحليل الأداء",
     "og.description":
-      "اصنع تجميعتك، تحقّق من التوافق، وتوقّع أداءك — بدقة وبلا تحيّز.",
+      "اصنع تجميعتك، تحقّق من التوافق، وتوقّع أداءك بدقة وبلا تحيّز.",
     "lang.select": "اختر اللغة",
     "lang.ar": "العربية",
     "lang.en": "EN",
@@ -261,7 +254,7 @@ const translations = {
     "auth.login": "دخول / تسجيل",
     "hero.title": "كل ما تحتاجه لجهازك في مكانٍ واحد",
     "hero.desc":
-      "اصنع تجميعتك، تحقّق من التوافق، وتوقّع الأداء — منصة واحدة متكاملة تناسب المبتدئ والمحترف.",
+      "اصنع تجميعتك، تحقّق من التوافق، وتوقّع الأداء، في منصة واحدة متكاملة تناسب المبتدئ والمحترف.",
     "hero.ctaPrimary": "ابدأ تجميعتك",
     "hero.ctaSecondary": "جرّب المساعد الذكي",
     "bench.live": "تحليل مباشر",
@@ -269,8 +262,8 @@ const translations = {
     "bench.gpuLabel": "GPU",
     "bench.cpuLabel": "CPU",
     "bench.bottleneck": "اختناق (Bottleneck)",
-    "bench.bottleneckStatus": "ممتاز ✓ 2.4%",
-    "bench.fpsLabel": "FPS — Cyberpunk 2077 · 1080p Ultra",
+    "bench.bottleneckStatus": "2.4%",
+    "bench.fpsLabel": "FPS · Cyberpunk 2077 · 1080p Ultra",
     "bench.fpsStatus": "FPS 148",
     "bench.futureLabel": "Future Proof Score",
     "bench.futureStatus": "100 / 87",
@@ -306,7 +299,7 @@ const translations = {
     "whyus.scattered.number": "١",
     "whyus.scattered.title": "أدوات مبعثرة",
     "whyus.scattered.desc":
-      "التوافق في موقع، والأسعار في موقع آخر، والأداء في موقع ثالث — لا توجد منصة واحدة تجمع كل ذلك.",
+      "التوافق في موقع، والأسعار في موقع آخر، والأداء في موقع ثالث، ولا توجد منصة واحدة تجمع كل ذلك.",
     "whyus.beginners.number": "٢",
     "whyus.beginners.title": "معقّدة على المبتدئ",
     "whyus.beginners.desc":
@@ -318,7 +311,7 @@ const translations = {
     "ai-proof.title": "جهازك المثالي يبدأ من هنا",
     "ai-proof.you": "أنت",
     "ai-proof.ai": "elKaeron AI",
-    "ai-proof.msg1": "عندي ميزانية 20,000 جنيه — أنسب تجميعة ألعاب إيه؟",
+    "ai-proof.msg1": "عندي ميزانية 20,000 جنيه، أنسب تجميعة ألعاب إيه؟",
     "ai-proof.reply1":
       "بناءً على ميزانيتك وأسعار السوق المصري الحالية: Ryzen 5 7600 + RX 7700 XT + 16GB DDR5. هتحصل على 120+ FPS في معظم الألعاب عند 1080p، مع Future Proof Score 82/100. الاختناق 1.8% بس. تحتاج تفاصيل أكتر؟",
     "ai-proof.msg2": "RTX 4070 هتكون أحسن بدالها؟",
@@ -346,7 +339,7 @@ const translations = {
     "workflow.decide.desc":
       "اتّخذ قرارك النهائي بناءً على بيانات دقيقة وحقيقية، بلا تخمين وبلا تحيّز.",
     "footer.desc":
-      "منصة متكاملة لتجميع أجهزة الكمبيوتر وفحصها وتطويرها — بمعايير دقيقة وبيانات حقيقية.",
+      "منصة متكاملة لتجميع أجهزة الكمبيوتر وفحصها وتطويرها، بمعايير دقيقة وبيانات حقيقية.",
     "footer.tools": "الأدوات",
     "footer.company": "الشركة",
     "footer.support": "الدعم الفني",
@@ -391,18 +384,15 @@ const translations = {
       "هل نسبة الاختناق الظاهرة تعني أن جهازي لن يعمل؟",
     "faq.bottleneckMeaning.a":
       "لا، بالطبع لا. الاختناق يعني فقط أنك لن تحصل على 100% من أداء القطعة الأقوى، لكن الجهاز سيعمل بشكل طبيعي تمامًا.",
-    "chat.title": "مساعد Elkaeron الذكي",
-    "chat.description":
-      "اسألني عن أي شيء يخص المنصة، أو التجميعات، أو المهارات، أو الخبرة.",
   },
 
   en: {
     "site.title": "elkaeron",
     "meta.description":
-      "Build your PC, check compatibility, and forecast performance — all in one platform.",
+      "Build your PC, check compatibility, and forecast performance, all in one platform.",
     "og.title": "elKaeron | Build, Analyze & Optimize Your PC",
     "og.description":
-      "PC builds, compatibility checks, and real performance analysis — unbiased, for everyone.",
+      "PC builds, compatibility checks, and real performance analysis, unbiased for everyone.",
     "lang.select": "Select language",
     "lang.ar": "عربي",
     "lang.en": "EN",
@@ -456,7 +446,7 @@ const translations = {
     "auth.login": "Sign in / Register",
     "hero.title": "Everything you need for your PC in one place",
     "hero.desc":
-      "Build your rig, check compatibility, and forecast performance — one platform for beginners and pros alike.",
+      "Build your rig, check compatibility, and forecast performance, all in one platform for beginners and pros alike.",
     "hero.ctaPrimary": "Start your build",
     "hero.ctaSecondary": "Try the AI assistant",
     "bench.live": "Live analysis",
@@ -464,8 +454,8 @@ const translations = {
     "bench.gpuLabel": "GPU",
     "bench.cpuLabel": "CPU",
     "bench.bottleneck": "Bottleneck",
-    "bench.bottleneckStatus": "Excellent ✓ 2.4%",
-    "bench.fpsLabel": "FPS — Cyberpunk 2077 · 1080p Ultra",
+    "bench.bottleneckStatus": "2.4%",
+    "bench.fpsLabel": "FPS · Cyberpunk 2077 · 1080p Ultra",
     "bench.fpsStatus": "FPS 148",
     "bench.futureLabel": "Future Proof Score",
     "bench.futureStatus": "100 / 87",
@@ -496,7 +486,7 @@ const translations = {
       "Level up your build gradually, smartly, and at minimum cost.",
     "features.compare.title": "Build Comparison",
     "features.compare.desc":
-      "Compare two builds on performance and price — and decide with confidence.",
+      "Compare two builds on performance and price, and decide with confidence.",
     "features.assistant.title": "Smart Assistant",
     "features.assistant.desc":
       "Ask any hardware question and get an instant answer from a specialized AI.",
@@ -518,7 +508,7 @@ const translations = {
     "ai-proof.you": "You",
     "ai-proof.ai": "elKaeron AI",
     "ai-proof.msg1":
-      "I have a budget of 20,000 EGP — what's the best gaming build?",
+      "I have a budget of 20,000 EGP, what's the best gaming build?",
     "ai-proof.reply1":
       "Based on your budget and current Egyptian market prices: Ryzen 5 7600 + RX 7700 XT + 16GB DDR5. You'll get 120+ FPS in most games at 1080p with a Future Proof Score of 82/100. Bottleneck is only 1.8%. Want the full breakdown?",
     "ai-proof.msg2": "Would an RTX 4070 be a better choice instead?",
@@ -534,7 +524,7 @@ const translations = {
     "workflow.check.number": "2",
     "workflow.check.title": "Instant Compatibility Check",
     "workflow.check.desc":
-      "We automatically verify every part works together — zero room for mistakes.",
+      "We automatically verify every part works together, with zero room for mistakes.",
 
     "workflow.analyze.number": "3",
     "workflow.analyze.title": "See the Performance Analysis",
@@ -544,21 +534,16 @@ const translations = {
     "workflow.decide.number": "4",
     "workflow.decide.title": "Build With Confidence",
     "workflow.decide.desc":
-      "Make your final call based on real, accurate data — no guessing, no bias.",
+      "Make your final call based on real, accurate data, no guessing, no bias.",
     "footer.desc":
-      "Your all-in-one platform to build, check, and improve PC systems — with real data and zero bias.",
+      "Your all-in-one platform to build, check, and improve PC systems, with real data and zero bias.",
     "footer.tools": "Tools",
     "footer.company": "Company",
     "footer.support": "Support",
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms and Conditions",
-    "chat.title": "Elkaeron AI Assistant",
-    "chat.description":
-      "Ask me anything about the portfolio, projects, skills, or experience.",
   },
 };
-
-// ── Word-by-word animation ─────────────────────────────────────────────────
 (function injectWordAnimStyles() {
   if (document.getElementById("word-anim-style")) return;
   const style = document.createElement("style");
@@ -568,7 +553,7 @@ const translations = {
       display: inline-block;
       overflow: hidden;
       vertical-align: bottom;
-      padding-bottom: 0.08em;   /* يمنع قطع الحروف النازلة */
+      padding-bottom: 0.08em;
       margin-bottom: -0.08em;
     }
     .word-inner {
@@ -588,7 +573,6 @@ const translations = {
 })();
 
 /**
-
   @param {HTMLElement} el        
   @param {number}      baseDelay 
   @param {number}      stagger   
@@ -615,29 +599,21 @@ function animateWords(el, baseDelay = 0, stagger = 55) {
 }
 
 function translatePage(lang) {
-  // 1. تغيير لغة واتجاه الصفحة
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-
-  // 2. ترجمة النصوص
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.dataset.i18n;
     const value = translations[lang]?.[key];
     if (value) el.textContent = value;
   });
-
-  // 3. ترجمة الـ aria-label
   document.querySelectorAll("[data-i18n-aria-label]").forEach((el) => {
     const key = el.getAttribute("data-i18n-aria-label");
     const value = translations[lang]?.[key];
     if (value) el.setAttribute("aria-label", value);
   });
-
-  // 4. تحديث اتجاه الأيقونات مباشرة
   const currentDir = document.documentElement.dir;
   const leftIcons = document.querySelectorAll(".fa-arrow-left");
   const rightIcons = document.querySelectorAll(".fa-arrow-right");
-
   if (currentDir === "ltr") {
     leftIcons.forEach((icon) => {
       icon.classList.replace("fa-arrow-left", "fa-arrow-right");
@@ -665,8 +641,6 @@ langSelectors.forEach((select) => {
     simulateLiveTick();
 
     langSelectors.forEach((s) => (s.value = lang));
-
-    // إعادة تشغيل أنيميشن الكلمات بعد تغيير اللغة
     animateWords(document.querySelector(".hero-heading"), 0, 55);
     animateWords(document.querySelector(".hero-desc"), 180, 38);
   });
@@ -688,8 +662,6 @@ simulateLiveTick();
       });
     }, delay);
   }
-
-  // ── Hero: heading + desc كلمة كلمة، ثم الباقي ────────────────────────────
   animateWords(document.querySelector(".hero-heading"), 0, 55);
   animateWords(document.querySelector(".hero-desc"), 220, 38);
 
@@ -697,26 +669,6 @@ simulateLiveTick();
   const benchCard = document.querySelector(".benchmark-card");
   if (heroBtns) animateEl(heroBtns, 500);
   if (benchCard) animateEl(benchCard, 620);
-
-  // ── Progress bars تتملى مع ظهور الكارت ───────────────────────────────────
-  // setTimeout(() => {
-  //   const bench = document.querySelector(".benchmark-card");
-  //   if (!bench) return;
-
-  //   bench.querySelectorAll(".progress-fill").forEach((fill) => {
-  //     const targetW = fill.style.width;
-  //     fill.style.transition = "none";
-  //     fill.style.width = "0%";
-  //     requestAnimationFrame(() =>
-  //       requestAnimationFrame(() => {
-  //         fill.style.transition = "width .85s cubic-bezier(.34, 1.56, .64, 1)";
-  //         fill.style.width = targetW;
-  //       }),
-  //     );
-  //   });
-  // }, 650); // نفس توقيت ظهور الكارت تقريبًا
-
-  // ── Scroll-triggered sections ──────────────────────────────────────────────
   [
     [".stats-grid", ".stat"],
     ["#why-us-container", ".card"],
@@ -820,32 +772,3 @@ cards.forEach((card) => {
     }
   });
 });
-const closeBtn = document.getElementById("ai-close-btn");
-const chat = document.getElementById("chat");
-const fab = document.getElementById("fab");
-const chatBody = document.getElementById("chat-body");
-const messages = document.querySelector(".messages");
-closeBtn.addEventListener("click", () => {
-  chat.classList.toggle("active");
-});
-fab.addEventListener("click", () => {
-  chat.classList.toggle("active");
-});
-if (messages.children === true) {
-  chatBody.style.display = "none";
-} else {
-  messages.style.display = "none";
-}
-const hero = document.querySelector(".hero");
-
-const observer = new IntersectionObserver((entries) => {
-  const entry = entries[0];
-  if (entry.isIntersecting) {
-    fab.style.visibility = "hidden";
-    fab.style.opacity = 0;
-  } else {
-    fab.style.visibility = "visible";
-    fab.style.opacity = 1;
-  }
-});
-observer.observe(hero);

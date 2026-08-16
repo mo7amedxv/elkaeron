@@ -26,9 +26,8 @@
   --text3: #7c7c7c;
   --border: #2c2c2c;
   --border2: #3c3c3c;
-  --red: #e0716a;
-  --green: #6fbf8b;
-  --amber: #d9a96c;
+  --gray: #777777;
+  --amber: #555555;
   --card-bg: #1a1a1a;
   --font-main: "Poppins", "Cairo", system-ui, sans-serif;
   --radius-sm: 4px;
@@ -97,8 +96,7 @@ html[dir="ltr"] {
   --text3: #8c8c8c;
   --border: #e2e2e2;
   --border2: #d0d0d0;
-  --red: #444444;
-  --green: #777777;
+  --gray: #777777;
   --amber: #555555;
   --card-bg: #ffffff;
   --btn-text-color: #f2f2f2;
@@ -275,8 +273,8 @@ body.light-mode .theme-btn .icon-light {
   width: 8px;
   height: 8px;
   border-radius: var(--radius-full);
-  background: var(--green);
-  box-shadow: 0 0 0 0 var(--green);
+  background: var(--gray);
+  box-shadow: 0 0 0 0 var(--gray);
   animation: pulse 2s infinite;
   flex-shrink: 0;
 }
@@ -374,16 +372,11 @@ body.light-mode .theme-btn .icon-light {
   white-space: nowrap;
 }
 
-.status-good {
-  color: var(--green);
-}
-.status-fps {
-  color: var(--primary-color3);
-}
+.status-good,
+.status-fps,
 .status-future {
-  color: var(--accent3);
+  color: var(--accent); 
 }
-
 .progress-track {
   display: flex;
   width: 100%;
@@ -399,17 +392,13 @@ body.light-mode .theme-btn .icon-light {
 }
 
 .fill-good {
-  background: var(--green);
+  background: var(--gray);
 }
 .fill-fps {
-  background: linear-gradient(
-    to left,
-    var(--primary-color3),
-    var(--primary-color)
-  );
+  background-color: var(--gray);
 }
 .fill-future {
-  background: var(--accent);
+  background: var(--gray);
 }
 
 @media (max-width: 780px) {
@@ -1343,4 +1332,22 @@ html[dir="ltr"] .fab::after {
 .chat-desc {
   font-size: var(--font-sm);
   color: var(--text2);
+}
+img,
+button,
+a,
+select,
+details,
+summary {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-drag: none;
+  outline: none;
+}
+
+select:focus,
+summary:focus {
+  outline: none;
 }
