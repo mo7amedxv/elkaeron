@@ -348,8 +348,8 @@ const translations = {
     "lang.en": "EN",
     "theme.toggle": "Toggle theme",
     "nav.menu": "Menu",
-    "nav.builder": "PC Builder",
-    "nav.bottleneck": "Bottleneck Check",
+    "nav.builder": "Builder",
+    "nav.bottleneck": "Bottleneck",
     "faq.title": "FAQ's",
     "footer.copy": `© ${currentYear} elKaeron. All rights reserved.`,
     "faq.fps.q":
@@ -380,8 +380,8 @@ const translations = {
       "Does a visible bottleneck mean my PC won't work?",
     "faq.bottleneckMeaning.a":
       "Not at all. A bottleneck simply means you won't get 100% of your stronger component's performance, but the system will still run completely normally.",
-    "nav.performanceForecast": "Performance Forecast",
-    "nav.compare": "Build Comparison",
+    "nav.performanceForecast": "Forecast",
+    "nav.compare": "Compare",
     "auth.login": "Sign in / Register",
     "hero.title": "Everything you need for your PC in one place",
     "hero.desc":

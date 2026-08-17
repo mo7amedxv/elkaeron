@@ -193,9 +193,31 @@ select {
     brightness(88%) contrast(80%);
 }
 .header-link {
-  font-size: var(--font-xs);
+  font-size: var(--font-sm);
   text-align: center;
   transition: color var(--main-transtion);
+}
+.header-link span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 800px) {
+  .header-link span::before {
+    transition: transform var(--main-transtion);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--text);
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: center;
+  }
+  .header-link:hover span::before {
+    transform: scaleX(1);
+  }
 }
 footer .logo-name {
   margin-left: var(--space-sm);
@@ -450,6 +472,7 @@ body.light-mode .theme-btn .icon-light {
   position: relative;
   display: inline-flex;
   align-items: center;
+  margin-inline-start: 10px;
 }
 .lang-select-wrapper::before {
   font-family: "Material Symbols Outlined";
@@ -567,7 +590,7 @@ html[dir="rtl"] .mobile-menu-drawer {
   gap: var(--space-md);
 }
 .mobile-utility-links a {
-  font-size: var(--font-xs);
+  font-size: var(--font-base);
   opacity: 0.75;
   text-decoration: none;
   color: inherit;
@@ -613,7 +636,7 @@ html[dir="rtl"] .mobile-menu-drawer {
 body.menu-open {
   overflow: hidden;
 }
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .mobile-header-actions {
     display: flex;
     align-items: center;
@@ -658,7 +681,7 @@ body.menu-open {
     padding-top: 120px;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   html[dir="ltr"] .header-links,
   html[dir="ltr"] .header-actions {
     display: none;
@@ -1092,7 +1115,7 @@ select:focus,
 summary:focus {
   outline: none;
 }
-::selection{
+::selection {
   background-color: var(--text);
   color: var(--card-bg);
 }
